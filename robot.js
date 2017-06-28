@@ -14,7 +14,7 @@ golos.config.set('chain_id','782a3039b478c839e4cb0c941ff4eaeb7df40bdd68bd441afd4
 const botname = 'goloswiki'
 
 // Приватный ключ ОБСУЖДАЕМОЕ 
-const wif = ''
+const wif = '55555'
 
 // Сумма для уведомлений
 const ammount = '0.001 GOLOS'

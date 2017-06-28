@@ -2,7 +2,8 @@ const util = require('util')
 const Promise = require("bluebird")
 const _ = require('lodash')
 const golos = require('steem')
-golos.config.set('websocket','ws://localhost:9090');
+golos.config.set('websocket','wss://ws.golos.io');
+// ws://localhost:9090 
 // На серверах без ноды голоса или steem указывайте адрес публичной ноды
 // Например wss://ws.golos.io
 // Настройки ниже определяют к какому блокчейну вы намерены подключится. Уберите 2 строки ниже, что бы использовать бота для стим

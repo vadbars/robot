@@ -71,14 +71,14 @@ const [type, data] = operation
 	if (data.author === winner) {
 		// Вы также можете добавить && data.author === post, чтобы бот учитывал голоса только за определенный пост
 		// Отправляем ему донат с примечанием
-		golos.broadcast.transfer(wif, botname, winner, ammountw, memo,
-						 function(err, result) {
-							  if(err){
-						console.log(err);  
-					  } else {
+// 		golos.broadcast.transfer(wif, botname, winner, ammountw, memo,
+// 						 function(err, result) {
+// 							  if(err){
+// 						console.log(err);  
+// 					  } else {
 						  console.log(`Донат ${winner} ${ammountw}`)
-					  }
-							 });
+// 					  }
+// 							 });
 						}
 			}
 				
@@ -95,14 +95,14 @@ const [type, data] = operation
 			
 			
             // Отправляем уведомление о реблоге
-			golos.broadcast.transfer(wif, botname, reblogData[1].author, ammount, `⚡ @${initiator} сделал репост вашей записи 👉 ${reblogData[1].permlink}`, function(err, result) {
-                	  if(err){
-						console.log(err);  
-					  } else {
+// 			golos.broadcast.transfer(wif, botname, reblogData[1].author, ammount, `⚡ @${initiator} сделал репост вашей записи 👉 ${reblogData[1].permlink}`, function(err, result) {
+//                 	  if(err){
+// 						console.log(err);  
+// 					  } else {
 						  console.log(`@${initiator} сделал репост ${reblogData[1].permlink} `)
-					  }
-					  
-                	});
+// 					  }
+// 					  
+//                 	});
         
 			}
 		
@@ -119,38 +119,38 @@ const [type, data] = operation
 			// Детектим игнор
 			if (data === 'ignore'){
 				
-            golos.broadcast.transfer(wif, botname, user, ammount, `🚩 @${initiator} добавил вас в игнор`, function(err, result) {
-                	  if(err){
-						console.log(err);  
-					  } else {
+//             golos.broadcast.transfer(wif, botname, user, ammount, `🚩 @${initiator} добавил вас в игнор`, function(err, result) {
+//                 	  if(err){
+// 						console.log(err);  
+// 					  } else {
 						  console.log(`@${initiator} добавил в игнор  ${reblogData[1].following}`)
 						 
-					  }
-                	});
+// 					  }
+//                 	});
 				
 			}
 			// Детектим подписку
 			else if(data === 'blog'){
 				
 				
-            golos.broadcast.transfer(wif, botname, user, ammount, `👍 @${initiator} подписался на ваш блог!`, function(err, result) {
-                	   if(err){
-						console.log(err);  
-					  } else {
+//             golos.broadcast.transfer(wif, botname, user, ammount, `👍 @${initiator} подписался на ваш блог!`, function(err, result) {
+//                 	   if(err){
+// 						console.log(err);  
+// 					  } else {
 						  console.log(`@${initiator} подписался на  ${reblogData[1].following}`)
-					  }
-                	});
+// 					  }
+//                 	});
 			}
 			// В ином случае это отписка
 			else {
 				
-            golos.broadcast.transfer(wif, botname, user, ammount, `❗ @${initiator} отписался от вашего блога`, function(err, result) {
-                	   if(err){
-						console.log(err);  
-					  }else{
+//             golos.broadcast.transfer(wif, botname, user, ammount, `❗ @${initiator} отписался от вашего блога`, function(err, result) {
+//                 	   if(err){
+// 						console.log(err);  
+// 					  }else{
 						  console.log(`@${initiator} ОТПИСАЛСЯ от ${reblogData[1].following}`)
-					  }
-                	});
+// 					  }
+//                 	});
 				
 			}
 			
@@ -174,14 +174,14 @@ const [type, data] = operation
 	//if (metaData.users[0].length > 1 && !metaData.users[0].includes('bm-') && metaData.users[0] !=="oxisunbeam") {}
             
 				for (let mention of mentions) {
-					golos.broadcast.transfer(wif, botname, mention, ammount, `💡 @${data.author} упомянул вас в сообщении  https://golos.io/@${data.author}/${data.permlink} `, function(err, result) {
-                	   if(err){
-						console.log(err);  
-					  } else {
+// 					golos.broadcast.transfer(wif, botname, mention, ammount, `💡 @${data.author} упомянул вас в сообщении  https://golos.io/@${data.author}/${data.permlink} `, function(err, result) {
+//                 	   if(err){
+// 						console.log(err);  
+// 					  } else {
 						  console.log(`@${mention} упомянут тут @${data.author}${data.permlink}`)
                 
-					  }
-                	});
+// 					  }
+//                 	});
             
 			
 			}

@@ -20,7 +20,7 @@ const wif = '5...'
 const ammount = '0.001 GOLOS'
 
 // Логин автора, которого хотите поддержать
-const winner  = 'vadbars'
+const winner  = 'goloswiki'
 
 // Ссылка на пост автора, которого хотите поддержать
 const post    = 'permlink'
@@ -71,15 +71,15 @@ const [type, data] = operation
 	if (data.author === winner) {
 		// Вы также можете добавить && data.author === post, чтобы бот учитывал голоса только за определенный пост
 		// Отправляем ему донат с примечанием
-		golos.broadcast.transfer(wif, botname, winner, ammountw, memo,
-						 function(err, result) {
-							  if(err){
-						console.log(err);  
-					  } else {
+// 		golos.broadcast.transfer(wif, botname, winner, ammountw, memo,
+// 						 function(err, result) {
+// 							  if(err){
+// 						console.log(err);  
+// 					  } else {
 						  console.log(`Донат ${winner} ${ammountw}`)
-					  }
-							 });
-						}
+// 					  }
+// 							 });
+// 						}
 			}
 				
 	// Если подписка, отписка, игнор или реблог			
@@ -87,7 +87,6 @@ const [type, data] = operation
 	if(typeof data.json !== 'undefined'){
 		const initiator = data.required_posting_auths;
         const reblogData = JSON.parse(data.json);
-		
 		
 		if  (reblogData[0] === 'reblog') {
           // Фильтруем аккаунты бизнес молодости и тех, кто отписался от рассылки
@@ -100,17 +99,12 @@ const [type, data] = operation
 // 						console.log(err);  
 // 					  } else {
 						  console.log(`@${initiator} сделал репост ${reblogData[1].permlink} `)
-// 					  }
-					  
-//                 	});
-        
-			}
-		
-		
+// 					  }					  
+//                 	});        
+			}		
 		} 
 		// Если операция подписки, отписки, блока
-        else if (reblogData[0] === 'follow') {
-			
+        else if (reblogData[0] === 'follow') {			
 			const data = reblogData[1].what[0];
 			const user = reblogData[1].following;
 			
@@ -123,15 +117,12 @@ const [type, data] = operation
 //                 	  if(err){
 // 						console.log(err);  
 // 					  } else {
-						  console.log(`@${initiator} добавил в игнор  ${reblogData[1].following}`)
-						 
+						  console.log(`@${initiator} добавил в игнор  ${reblogData[1].following}`) 
 // 					  }
-//                 	});
-				
+//                 	});				
 			}
 			// Детектим подписку
-			else if(data === 'blog'){
-				
+			else if(data === 'blog'){	
 				
 //             golos.broadcast.transfer(wif, botname, user, ammount, `👍 @${initiator} подписался на ваш блог!`, function(err, result) {
 //                 	   if(err){
@@ -151,7 +142,6 @@ const [type, data] = operation
 						  console.log(`@${initiator} ОТПИСАЛСЯ от ${reblogData[1].following}`)
 // 					  }
 //                 	});
-				
 			}
 			
 		 }
@@ -179,15 +169,10 @@ const [type, data] = operation
 // 						console.log(err);  
 // 					  } else {
 						  console.log(`@${mention} упомянут тут @${data.author}${data.permlink}`)
-                
 // 					  }
 //                 	});
-            
-			
 			}
         }
-        
-
     }
 }
 

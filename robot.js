@@ -71,14 +71,14 @@ const [type, data] = operation
 	if (data.author === winner) {
 		// Вы также можете добавить && data.author === post, чтобы бот учитывал голоса только за определенный пост
 		// Отправляем ему донат с примечанием
-// 		golos.broadcast.transfer(wif, botname, winner, ammountw, memo,
+		golos.broadcast.transfer(wif, botname, winner, ammountw, memo,
 						 function(err, result) {
 							  if(err){
 						console.log(err);  
 					  } else {
 						  console.log(`Донат ${winner} ${ammountw}`)
 					  }
-// 							 });
+							 });
 						}
 			}
 				

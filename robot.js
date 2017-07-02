@@ -171,7 +171,8 @@ const [type, data] = operation
 						  console.log(`@${mention} упомянут тут @${data.author}${data.permlink}`)
 // 					  }
 //                 	});
-			}
+				}
+	}
         }
     }
 }

@@ -79,7 +79,7 @@ const [type, data] = operation
 						  console.log(`Донат ${winner} ${ammountw}`)
 // 					  }
 // 							 });
-// 						}
+						}
 			}
 				
 	// Если подписка, отписка, игнор или реблог			

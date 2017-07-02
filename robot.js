@@ -3,10 +3,10 @@ const Promise = require("bluebird")
 const _ = require('lodash')
 const golos = require('steem')
 golos.config.set('websocket','wss://ws.golos.io');
-// ws://localhost:9090 
+// Локальная нода ws://localhost:9090 
 // На серверах без ноды голоса или steem указывайте адрес публичной ноды
 // Например wss://ws.golos.io
-// Настройки ниже определяют к какому блокчейну вы намерены подключится. Уберите 2 строки ниже, что бы использовать бота для стим
+// Настройки ниже определяют к какому блокчейну вы намерены подключиться. Уберите 2 строки ниже, что бы использовать бота для стим
 golos.config.set('address_prefix','GLS');
 golos.config.set('chain_id','782a3039b478c839e4cb0c941ff4eaeb7df40bdd68bd441afd444b9da763de12');
 
@@ -213,7 +213,7 @@ const SENDBLOCK = currentblock => {
 }
 
 // Определяем стартовый блок на начало работы скрипта
-// Каждые 3 секунды увеличивае номер блока на 1
+// Каждые 3 секунды увеличиваем номер блока на 1
 const NEXTBLOCKS = firstblock => {
     let currentblock = firstblock
     setInterval(() => {

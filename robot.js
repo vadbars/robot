@@ -172,7 +172,7 @@ const [type, data] = operation
 // 					  }
 //                 	});
 				}
-	}
+	
         }
     }
 }

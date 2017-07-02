@@ -19,9 +19,9 @@
 
 Логин бота
 
-`const botname = 'wikibot'`
+`const botname = 'goloswiki'`
 
-Приватный ключ (ОБСУЖДАЕМОЕ с golos.io) 
+Приватный ключ (ОБСУЖДАЕМОЕ с https://golos.io/@USERNAME/permissions) 
 
 `const wif = '5...'`
 

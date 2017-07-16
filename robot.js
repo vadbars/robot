@@ -212,6 +212,17 @@ const NEXTBLOCKS = firstblock => {
     }, 3000)
 }
 
+var message = 'Упоминание';
+
+function sendMessage(){
+  var chat_id = '@CHATNAME';
+  var token = 'tokentokentoken';
+  var sendtoapi = "https://api.telegram.org/bot"+token+"/sendMessage?chat_id="+chat_id+"&text="+message;
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.open("GET", sendtoapi, true);
+  xmlhttp.send();
+}
+
 // Запускаем основные функции через обещания (promises)
 
 dynamicSnap

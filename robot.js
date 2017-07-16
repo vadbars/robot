@@ -98,7 +98,7 @@ const [type, data] = operation
 //                 	  if(err){
 // 						console.log(err);  
 // 					  } else {
-						  console.log(`@${initiator} сделал репост ${reblogData[1].permlink} `)
+//  //						  console.log(`@${initiator} сделал репост ${reblogData[1].permlink} `)
 // 					  }					  
 //                 	});        
 			}		
@@ -117,7 +117,7 @@ const [type, data] = operation
 //                 	  if(err){
 // 						console.log(err);  
 // 					  } else {
-						  console.log(`@${initiator} добавил в игнор  ${reblogData[1].following}`) 
+//  //						  console.log(`@${initiator} добавил в игнор  ${reblogData[1].following}`) 
 // 					  }
 //                 	});				
 			}
@@ -128,7 +128,7 @@ const [type, data] = operation
 //                 	   if(err){
 // 						console.log(err);  
 // 					  } else {
-						  console.log(`@${initiator} подписался на  ${reblogData[1].following}`)
+//  //						  console.log(`@${initiator} подписался на  ${reblogData[1].following}`)
 // 					  }
 //                 	});
 			}
@@ -139,7 +139,7 @@ const [type, data] = operation
 //                 	   if(err){
 // 						console.log(err);  
 // 					  }else{
-						  console.log(`@${initiator} ОТПИСАЛСЯ от ${reblogData[1].following}`)
+//  //						  console.log(`@${initiator} ОТПИСАЛСЯ от ${reblogData[1].following}`)
 // 					  }
 //                 	});
 			}

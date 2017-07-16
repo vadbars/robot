@@ -169,7 +169,8 @@ const [type, data] = operation
 // 						console.log(err);  
 // 					  } else {
 						  console.log(`@${mention} упомянут тут @${data.author}${data.permlink}`)
-// 					  }
+sendMessage()
+					// 					  }
 //                 	});
 				}
 	
@@ -212,9 +213,9 @@ const NEXTBLOCKS = firstblock => {
     }, 3000)
 }
 
-var message = 'Упоминание';
 
 function sendMessage(){
+  var message = 'Упоминание';
   var chat_id = '@CHATNAME';
   var token = 'tokentokentoken';
   var sendtoapi = "https://api.telegram.org/bot"+token+"/sendMessage?chat_id="+chat_id+"&text="+message;

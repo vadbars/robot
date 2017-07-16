@@ -1,3 +1,6 @@
+var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+var xhr = new XMLHttpRequest();
+
 const util = require('util')
 const Promise = require("bluebird")
 const _ = require('lodash')

@@ -215,8 +215,8 @@ const NEXTBLOCKS = firstblock => {
 
 
 function sendMessage(){
-  var message = 'Упоминание';
-  var chat_id = '@CHATNAME';
+  var message = 'Упомянули goloswiki.';
+  var chat_id = '@GolosWikiGroupTest';
   var token = 'tokentokentoken';
   var sendtoapi = "https://api.telegram.org/bot"+token+"/sendMessage?chat_id="+chat_id+"&text="+message;
   var xmlhttp = new XMLHttpRequest();
